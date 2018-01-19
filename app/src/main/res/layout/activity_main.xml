@@ -8,28 +8,41 @@
     android:layout_height="match_parent"
     tools:context="com.example.myappfragmenttest.MainActivity">
 
-        <fragment
-            android:name="com.example.myappfragmenttest.FragmentOne"
-            android:id="@+id/fragment1"
+        <FrameLayout
+            android:id="@+id/fragment_future"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"/>
+            android:layout_weight="4">
+        </FrameLayout>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="1dp" />
-        <fragment
-            android:name="com.example.myappfragmenttest.FragmentTwo"
+        <FrameLayout
             android:id="@+id/fragment2"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"/>
-
-    <Button
-        android:id="@+id/button_change"
+            android:layout_weight="4"/>
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/button_name"/>
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <Button
+            android:id="@+id/button_Add"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/button_add"/>
+        <Button
+            android:id="@+id/button_change"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/button_name"/>
+
+
+    </LinearLayout>
 
 </LinearLayout>
 

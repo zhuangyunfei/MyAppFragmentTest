@@ -3,4 +3,5 @@
     <!-- MainActivity-->
     <string name="toolbar_name">测试Fragment</string>
     <string name="button_name">变</string>
+    <string name="button_add">添加</string>
 </resources>
