@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
-    public void addFragment(){
+    private void addFragment(){
         //第一步 获取FragmentManager实例
         FragmentManager fragmentManager = getSupportFragmentManager();
         //第二步 获取事务实例
@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         fragmentTransaction.add(R.id.fragment2,fragmentTwo);
         fragmentTransaction.commit();
     }
-    public void replaceFragment1to3(){
+    private void replaceFragment1to3(){
         //第一步获取FragmentManager实例
         FragmentManager fragmentManager1 =getSupportFragmentManager();
         //获取开启事务的实例
@@ -56,5 +56,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //添加具体的事务内容：执行替换Fragment
         fragmentTransaction1.replace(R.id.fragment_future,fragmentThree);
         fragmentTransaction1.commit();
+    }
+    //销毁活动
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        finish();
     }
 }
